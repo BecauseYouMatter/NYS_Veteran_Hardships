@@ -18,7 +18,8 @@ nav{
 	overflow-x: auto;
 }
 
-nav a{
+nav a,
+nav .nav-disabled{
 	box-sizing: border-box;
 	display: inline-block;
 	line-height: 2.2rem;
@@ -32,7 +33,19 @@ nav a{
 	font-weight: bold;
 	white-space: nowrap;
 	flex: 0 0 auto;
+
 }
+
+/* Disabled nav "button" (use on index page for Back) */
+nav .nav-disabled{
+	opacity: 0.55;
+	background-color: #8FA66A;   /* pick your disabled color */
+	color: #0B5D66;
+	cursor: not-allowed;
+	user-select: none;
+	pointer-events: none;
+}
+
 
 .nav-image-wrap{
 	display: none;
@@ -42,11 +55,45 @@ nav a{
 	display: none;
 }
 
+.pdf-viewer{
+  width: 100%;
+  min-width: 200px;
+
+  aspect-ratio: 4 / 3;
+  height: auto;
+
+  /* key: give it real viewing height so you don’t need the inner PDF scrollbar */
+  min-height: 75vh;     /* adjust: 60vh–90vh */
+  border: 0;
+  display: block;
+}
+
+.chart-wrap{
+  width: 100%;
+  margin: 0 auto;
+  display: block;        /* normal document flow */
+  overflow: visible;     /* IMPORTANT: don’t crop */
+}
+
+.chart-img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+ /* +++++++++++++++small screen++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media all and (min-width:900px){
 
 	body{
 		background-color: #E5EDED;
 	}
+
+	section{
+    height: auto;          /* let content determine height */
+  overflow: visible;     /* no inner scroll */
+  min-height: 100vh;     /* still fills the screen */
+  
+}
 
 	nav{
 		border: 1px solid #0B5D66;
@@ -57,7 +104,8 @@ nav a{
 		width: 20%;
 		min-width: 125px;
 		margin-right: 15px;
-		height: 100vh;
+		  min-height: 100vh;
+  		height: 400vh;          /* about 4 screens tall */
 		float: left;
 		padding: 1.5rem 0;
 		box-sizing: border-box;
@@ -65,7 +113,8 @@ nav a{
 		overflow: hidden;
 	}
 
-	nav a{
+	nav a,
+	nav .nav-disabled{
 		display: block;
 		width: 60%;
 		line-height: 45px;
@@ -80,7 +129,7 @@ nav a{
 		text-align: left;
 		font-weight: bold;
 		flex: 0 0 auto;
-	}
+}
 
 .nav-image-wrap{
 	flex: 1 1 auto;
@@ -88,7 +137,7 @@ nav a{
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	overflow: hidden;
 	min-height: 2rem;
@@ -111,10 +160,37 @@ nav a{
 
 	section{
 	display: block;
-	height: 100vh;
+	  min-height: 100vh;
+  		height: 400vh;          /* about 4 screens tall */
 	overflow: auto;
-	background-color: #FFFFFF;
+	background-color: #E5EDED;
 	color: #0B5D66;
 	margin-left: calc(1% + 1em);
+}
+.pdf-viewer{
+  width: 100%;
+  min-width: 200px;
+
+  /* height follows width */
+  aspect-ratio: 4 / 3;   /* change this: 16/9, 1/1, etc. */
+
+  /* don’t force 100vh */
+  height: auto;
+
+  border: 0;
+  display: block;
+}
+.chart-wrap{
+  width: 100%;
+  margin: 0 auto;
+  display: block;        /* normal document flow */
+  overflow: visible;     /* IMPORTANT: don’t crop */
+}
+
+.chart-img{
+  display: block;
+  width: 75%;
+  height: auto;
+  margin: 0 auto; 
 }
 }

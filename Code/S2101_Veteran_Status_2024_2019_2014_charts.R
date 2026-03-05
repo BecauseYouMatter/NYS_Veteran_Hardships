@@ -70,6 +70,14 @@ ggsave(
   width = 10,
   height = 6
 )
+ggsave(
+  filename = file.path(folder_path, "disability_bars_2019_2024.png"),
+  plot = p_year,
+  width = 10,
+  height = 6,
+  dpi = 300
+
+)
 
 # ---- Chart 2 (simpler): 4 bars per ZIP (2019/2024 × Vet/Nonvet), each labeled ----
 zip_totals <- kept %>%
@@ -181,6 +189,13 @@ ggsave(
   plot = p_year,
   width = 10,
   height = 6
+)
+ggsave(
+  filename = file.path(folder_path, "poverty_bars_2019_2024.png"),
+  plot = p_year,
+  width = 10,
+  height = 6,
+  dpi = 300
 )
 
 # ---- Chart Poverty 2 (simpler): 4 bars per ZIP (2019/2024 × Vet/Nonvet), each labeled ----
@@ -305,6 +320,13 @@ ggsave(
   plot = p_year,
   width = 10,
   height = 6
+)
+ggsave(
+  filename = file.path(folder_path, "labor_force_bars_2019_2024.png"),
+  plot = p_year,
+  width = 10,
+  height = 6,
+  dpi = 300
 )
 
 # ---- Chart LF 2 (simpler): 4 bars per ZIP (2019/2024 × Vet/Nonvet), each labeled ----

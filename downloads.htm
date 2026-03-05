@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Downloads page for NYS Veteran Hardships -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYS Veteran Hardships - Downloads</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/nav.js" defer></script>
+    <!-- meta tags for image credits on webpage -->
+    <meta name="image-credit-vet-table" content="AITubo AI - https://aitubo.ai/art/69a1b0d38880ed7246950c5f/">
+</head>
+
+<nav>
+    <a href="index.htm">Home</a>
+
+    <!-- From downloads, Next should go to the page AFTER where you came from -->
+    <a href="#" onclick="goNextFromDownloads(); return false;">Next →</a>
+
+    <!-- From downloads, Back should return to the page you came from -->
+    <a href="#" onclick="goBackFromDownloads(); return false;">← Back</a>
+
+    <!-- If you’re already on downloads, this can just reload downloads without changing state -->
+    <a href="downloads.htm">Downloads</a>
+
+    <div class="nav-image-wrap">
+        <img src="Images/Vet_download.png" alt="Illustration of unemployed veterans sitting at a support group table." class="nav-image">
+        <p class="image-credit">Illustration created with AITubo AI.</p>
+    </div>
+</nav>
+
+<section>
+    	<h2>Veteran Unemployment Rates in New York State</h2>
+        <p>The following graph shows the unemployment rates for veterans in New York State over the past decade. The data indicates a fluctuating trend, with certain years showing significant increases in unemployment rates. This information is crucial for understanding the economic challenges faced by veterans and can help inform policy decisions aimed at improving their employment prospects.</p>
+         
+    <h2>About This Project</h2>
+
+    <p>
+        This project was created as part of my Google Data Analyst coursework and portfolio development. It focuses on
+        visualizing veteran-related economic hardship indicators across New York State using public data.
+    </p>
+
+    <p>
+        Tools and support used in this project include:
+    </p>
+
+    <ul>
+        <li><strong>U.S. Census Bureau</strong> — ACS 5-year estimates (data source)</li>
+        <li><strong>RStudio</strong> — data cleaning, reshaping, and export to analysis-ready files</li>
+        <li><strong>Tableau Public</strong> — interactive charts and dashboards embedded throughout this site</li>
+        <li><strong>ChatGPT</strong> — assistance with code troubleshooting, formatting, and page structure</li>
+        <li><strong>AITubo AI</strong> — image generation used for page illustrations</li>
+    </ul>
+
+    <p>
+        Notes: ACS 5-year estimates are survey-based and can be sensitive to small denominators in small geographies.
+        Downloads are provided for transparency and reuse.
+    </p>
+</section>
+
+<section>
+    <h2>Downloads</h2>
+    <p>
+        Use the links below to download the cleaned datasets, supporting files, and (optional) documentation used to
+        build this website and Tableau visualizations.
+    </p>
+
+    <h3>Cleaned / Analysis-Ready Data (Recommended)</h3>
+    <ul>
+        <!-- Replace filenames with your real ones if different -->
+        <li><a href="Processed_Data/NYS_VetHardships_Clean_2024_2019.csv" download>Clean combined dataset (CSV)</a></li>
+        <li><a href="Processed_Data/NYS_VetHardships_Clean_2024_2019.xlsx" download>Clean combined dataset (Excel)</a></li>
+        <li><a href="Processed_Data/Data_Dictionary_NYS_VetHardships.pdf" download>Data dictionary (PDF)</a></li>
+    </ul>
+
+    <h3>Raw Source Tables (ACS 5-Year)</h3>
+    <ul>
+        <li><a href="Processed_Data/ACS_2014_Source.zip" download>ACS 2014 source tables (ZIP)</a></li>
+        <li><a href="Processed_Data/ACS_2019_Source.zip" download>ACS 2019 source tables (ZIP)</a></li>
+        <li><a href="Processed_Data/ACS_2024_Source.zip" download>ACS 2024 source tables (ZIP)</a></li>
+    </ul>
+
+    <h3>R Scripts / Processing</h3>
+    <ul>
+        <li><a href="Processed_Data/R_Code_Process_ACS.R" download>R script: process and combine ACS files (.R)</a></li>
+        <li><a href="Processed_Data/R_Readme_Processing_Notes.txt" download>Processing notes (TXT)</a></li>
+    </ul>
+
+    <h3>Tableau</h3>
+    <ul>
+        <li><a href="Processed_Data/NYS_VetHardships_Tableau.twbx" download>Tableau packaged workbook (.twbx)</a></li>
+        <li><a href="Processed_Data/Tableau_Field_Map.csv" download>Tableau field map / calc notes (CSV)</a></li>
+    </ul>
+
+    <h3>Website Files</h3>
+    <ul>
+        <li><a href="Processed_Data/Website_Source.zip" download>Website source (HTML/CSS/JS/Images) (ZIP)</a></li>
+    </ul>
+
+    <h3>Links (Optional)</h3>
+    <ul>
+        <li><a href="#" target="_blank" rel="noopener">Tableau Public profile / project link</a></li>
+        <li><a href="#" target="_blank" rel="noopener">GitHub repository (site source + data)</a></li>
+    </ul>
+</section>
+
+</html>
