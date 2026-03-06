@@ -1,4 +1,3 @@
-
 library(tinytex)
 library(tidyverse)
 library(lubridate)
@@ -23,14 +22,14 @@ Out_folder_path <- "C:/GitHub_Share/Vet_Hardship/NYS_Veteran_Hardships/Processed
 df <- read_csv(file_path, show_col_types = FALSE)
 
 #  only show names that contain labor
-names(df)[str_detect(names(df), "dis")]
+names(df)[str_detect(names(df), "pov")]
 
 df_plot <- df %>%
   select(
     zip_code,
     YEAR,
-    vet_dis_count,
-    nonvet_dis_count
+    vets_pov_count,
+    nonvets_pov_count
   ) %>%
   filter(YEAR %in% c(2019, 2024)) %>%
   mutate(
@@ -38,18 +37,18 @@ df_plot <- df %>%
     is_2024 = (YEAR == 2024)
   )
 
-ggplot(df_plot, aes(x = nonvet_dis_count,
-                    y = vet_dis_count,
+ggplot(df_plot, aes(x = nonvets_pov_count,
+                    y = vets_pov_count,
                     group = zip_code)) +
   geom_line(alpha = 0.25) +
   geom_point(aes(size = is_2024, shape = is_2024), alpha = 0.8) +
   scale_size_manual(values = c(`FALSE` = 1.2, `TRUE` = 3.5), guide = "none") +
   scale_shape_manual(values = c(`FALSE` = 16, `TRUE` = 1), guide = "none") +
   labs(
-    title = "Nonveteran-to-Veteran disability Imbalance by NYS ZIP Code",
+    title = "Nonveteran-to-Veteran poverty Imbalance by NYS ZIP Code",
     subtitle = "Lines connect 2019 to 2024 for each ZIP (larger marker = 2024)",
-    x = "Nonveterans with disability (count)",
-    y = "Veterans with disability (count)"
+    x = "Nonveterans in poverty (count)",
+    y = "Veterans in poverty (count)"
   ) +
   theme_minimal()
 
@@ -58,14 +57,14 @@ df_plot2 <- df %>%
   select(
     zip_code,
     YEAR,
-    vet_dis_count,
-    nonvet_dis_count
+    vets_pov_count,
+    nonvets_pov_count
   ) %>%
   filter(YEAR %in% c(2019, 2024)) %>%
   mutate(
     zip_code = as.character(zip_code),
     YEAR = as.integer(YEAR),
-    total_lf = vet_dis_count + nonvet_dis_count,
+    total_lf = vets_pov_count + nonvets_pov_count,
     is_2024 = (YEAR == 2024)
   ) %>%
   group_by(zip_code) %>%
@@ -108,10 +107,10 @@ df_plot3 <- df_plot2 %>%
 panel_summary <- df_plot3 %>%
   group_by(zip_code, movement_group, movement_label) %>%
   summarise(
-    vets_2019    = vet_dis_count[YEAR == 2019],
-    vets_2024    = vet_dis_count[YEAR == 2024],
-    nonvets_2019 = nonvet_dis_count[YEAR == 2019],
-    nonvets_2024 = nonvet_dis_count[YEAR == 2024],
+    vets_2019    = vets_pov_count[YEAR == 2019],
+    vets_2024    = vets_pov_count[YEAR == 2024],
+    nonvets_2019 = nonvets_pov_count[YEAR == 2019],
+    nonvets_2024 = nonvets_pov_count[YEAR == 2024],
     .groups = "drop"
   ) %>%
   mutate(
@@ -132,7 +131,7 @@ panel_summary <- df_plot3 %>%
 panel_summary <- panel_summary %>%
   mutate(
     label_text = paste0(
-      "Total disability change: ", scales::comma(total_change),
+      "Total poverty change: ", scales::comma(total_change),
       "\nVet change: ", scales::comma(vets_change),
       "\nNonvet change: ", scales::comma(nonvets_change)
     )
@@ -142,8 +141,8 @@ panel_summary <- panel_summary %>%
 
 
 # 2 panels on one page
-ggplot(df_plot3, aes(x = nonvet_dis_count,
-                     y = vet_dis_count,
+ggplot(df_plot3, aes(x = nonvets_pov_count,
+                     y = vets_pov_count,
                      group = zip_code,
                      color = movement_group)) +
   geom_line(alpha = 0.25) +
@@ -165,20 +164,20 @@ ggplot(df_plot3, aes(x = nonvet_dis_count,
   scale_shape_manual(values = c(`FALSE` = 16, `TRUE` = 1), guide = "none") +
   facet_wrap(~ movement_label) +
   labs(
-    title = "Disability Movement by NYS ZIP Code",
-    subtitle = "ZIPs split by whether total veteran + nonveteran disability increased or decreased from 2019 to 2024",
-    x = "Nonveterans with a disability (count)",
-    y = "Veterans with a disability (count)"
+    title = "Poverty Movement by NYS ZIP Code",
+    subtitle = "ZIPs split by whether total veteran + nonveteran poverty increased or decreased from 2019 to 2024",
+    x = "Nonveterans in poverty (count)",
+    y = "Veterans in poverty (count)"
   ) +
   theme_minimal() +
   theme(legend.position = "none")
 
 
 #create export
-p_disability_move <- ggplot(df_plot3, aes(x = nonvet_dis_count,
-                                     y = vet_dis_count,
-                                     group = zip_code,
-                                     color = movement_group)) +
+p_poverty_move <- ggplot(df_plot3, aes(x = nonvets_pov_count,
+                                       y = vets_pov_count,
+                                       group = zip_code,
+                                       color = movement_group)) +
   geom_line(alpha = 0.25) +
   geom_point(aes(size = is_2024, shape = is_2024), alpha = 0.8) +
   geom_label(
@@ -198,16 +197,16 @@ p_disability_move <- ggplot(df_plot3, aes(x = nonvet_dis_count,
   scale_shape_manual(values = c(`FALSE` = 16, `TRUE` = 1), guide = "none") +
   facet_wrap(~ movement_label) +
   labs(
-    title = "Disability Movement by NYS ZIP Code",
-    subtitle = "ZIPs split by whether total veteran + nonveteran disability increased or decreased from 2019 to 2024",
-    x = "Nonveterans with a disability (count)",
-    y = "Veterans with a disability (count)"
+    title = "Poverty Movement by NYS ZIP Code",
+    subtitle = "ZIPs split by whether total veteran + nonveteran poverty increased or decreased from 2019 to 2024",
+    x = "Nonveterans in poverty (count)",
+    y = "Veterans in poverty (count)"
   ) +
   theme_minimal() +
   theme(legend.position = "none")
 ggsave(
-  filename = file.path(Out_folder_path, "Disability_Movement_NYS_ZIP_Landscape.pdf"),
-  plot = p_disability_move,
+  filename = file.path(Out_folder_path, "Poverty_Movement_NYS_ZIP_Landscape.pdf"),
+  plot = p_poverty_move,
   device = "pdf",
   width = 11,
   height = 8.5,
@@ -215,8 +214,8 @@ ggsave(
 )
 
 ggsave(
-  filename = file.path(folder_path, "Disability_Movement_NYS_ZIP_Landscape.png"),
-  plot = p_disability_move,
+  filename = file.path(folder_path, "Poverty_Movement_NYS_ZIP_Landscape.png"),
+  plot = p_poverty_move,
   width = 9,
   height = 6,
   dpi = 300
