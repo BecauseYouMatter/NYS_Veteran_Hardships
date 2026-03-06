@@ -3,7 +3,8 @@ const pages = [
   "NYS_Vet01.htm",
   "NYS_Vet02.htm",
   "NYS_Vet03.htm",
-  "NYS_Vet04.htm"
+  "NYS_Vet04.htm",
+  "NYS_Vet05.htm",
 ];
 
 function currentPageIndex() {
