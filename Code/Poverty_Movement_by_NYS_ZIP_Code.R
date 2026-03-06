@@ -81,7 +81,8 @@ zip_direction <- df_plot2 %>%
       y2024 > y2019 ~ "Increase",
       y2024 < y2019 ~ "Decrease",
       TRUE ~ "No Change"
-    )
+    ),
+    movement_group = factor(movement_group, levels = c("Decrease", "Increase", "No Change"))
   )
 
 # count ZIPs in each movement group
@@ -156,8 +157,8 @@ ggplot(df_plot3, aes(x = nonvets_pov_count,
     size = 3.5
   ) +
   scale_color_manual(values = c(
-    "Decrease" = "red3",
-    "Increase" = "darkgreen",
+    "Increase" = "red3",
+    "Decrease" = "darkgreen",
     "No Change" = "goldenrod2"
   )) +
   scale_size_manual(values = c(`FALSE` = 1.2, `TRUE` = 3.5), guide = "none") +
@@ -189,8 +190,8 @@ p_poverty_move <- ggplot(df_plot3, aes(x = nonvets_pov_count,
     size = 3.5
   ) +
   scale_color_manual(values = c(
-    "Decrease" = "red3",
-    "Increase" = "darkgreen",
+    "Increase" = "red3",
+    "Decrease" = "darkgreen",
     "No Change" = "goldenrod2"
   )) +
   scale_size_manual(values = c(`FALSE` = 1.2, `TRUE` = 3.5), guide = "none") +
