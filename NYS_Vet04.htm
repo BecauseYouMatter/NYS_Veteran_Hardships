@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYS Veteran Hardships</title>
+    <title>NYS Veteran Hardships Disability</title>
     <link rel="stylesheet" href="CSS/style.css">
 
     <!-- meta tags for image credits on webpage -->
@@ -26,3 +26,68 @@
 		<p class="image-credit">Illustration created with AITubo AI.</p>
 	</div>
     </nav>
+         <section>
+        <h1> NYS Veteran Hardships by Zip Code</h1>
+		<h2>Overall Poverty Increased, Veteran Poverty Improved, and the Remaining Need Is Still Substantial</h2>
+        <p>
+        New York State's poverty count increased overall, but the ACS 5-year estimates suggest veterans were the one group that showed improvement.
+        From 2019 to 2024, the total number of people below poverty increased by <strong>4.56%</strong> (<strong>+86,210</strong>), and most of it was among
+        nonveterans which increased by <strong>4.74%</strong> (<strong>+87,160</strong>). In contrast, the number of veterans below poverty decreased by
+        <strong>1.92%</strong> (<strong>- 950</strong>). This is encouraging news—however, <strong>48,583</strong> veterans living below poverty is still a
+        substantial number and highlights the continued need for targeted support.
+        </p>
+
+       
+
+        <div class="chart-wrap">
+        <img class="chart-img"
+       src="Processed_Data/disability_bars_2019_2024.png"
+       alt="Disability bars 2019 vs 2024">
+        <p class="image-credit">
+              Data: U.S. Census Bureau ACS 5-year estimates (2019 &amp; 2024). Cleaned and summarized in RStudio.
+                &nbsp;|&nbsp; Download: <a href="Processed_Data/disability_bars_2019_2024.pdf" target="_blank" rel="noopener">PDF</a>
+            </p>
+        </div>
+
+
+            <p>
+        This ZIP code poverty pattern looks less like a veteran-specific shift and more like a community-wide economic tide. When ZIP codes are grouped by whether
+        <em>total</em> poverty (veteran + nonveteran) increased or decreased from 2019 to 2024, veterans and nonveterans move in the same direction within
+        each group. In the <strong>916</strong> ZIP codes where poverty increased, both groups increased; in the <strong>746</strong> ZIP codes where poverty
+        decreased, both groups decreased. This pattern supports learning from what is working in improving communities and prioritizing targeted local economic and community wide supports in ZIP codes where poverty is increasing, because these shifts affect veterans and nonveterans simultaneously.
+        </p>
+        <div class="chart-wrap">
+        <img class="chart-img"
+       src="Processed_Data/Disability_Movement_NYS_ZIP_Landscape.png"
+       alt="Disability movement 2019 vs 2024">
+        <p class="image-credit">
+              Data: U.S. Census Bureau ACS 5-year estimates (2019 &amp; 2024). Cleaned and summarized in RStudio.
+                &nbsp;|&nbsp; Download: <a href="Processed_Data/Disability_Movement_NYS_ZIP_Landscape.pdf" target="_blank" rel="noopener">PDF</a>
+            </p>
+        </div>
+
+            <p>
+        The chart below is a ZIP code listing for New York State, showing detailed <strong>disability counts</strong> for <strong>veterans</strong> and
+        <strong>nonveterans</strong> in <strong>2019</strong> and <strong>2024</strong>. It’s intentionally granular so you can see what’s happening
+        in individual communities—not just statewide averages. Take a moment to scroll through and look up your ZIP code to see how your community compares
+        with statewide patterns.
+        </p>
+        <object class="pdf-viewer"
+        data="Processed_Data/disability_zip_bars_2019_2024.pdf"
+        type="application/pdf">
+        <p>
+        Your browser can't display PDFs inline.
+        <a href="Processed_Data/disability_zip_bars_2019_2024.pdf" target="_blank" rel="noopener">Open the PDF</a>
+        or <a href="Processed_Data/disability_zip_bars_2019_2024.pdf" download>download it</a>.
+    </p>
+
+    </object>       
+                <p class="image-credit">
+              Data: U.S. Census Bureau ACS 5-year estimates (2019 &amp; 2024). Cleaned and summarized in RStudio.
+                &nbsp;|&nbsp; Download: <a href="Processed_Data/disability_zip_bars_2019_2024.pdf"
+                 target="_blank" rel="noopener">PDF</a>
+            </p> 
+            
+    </section>
+</body> 
+</html>
