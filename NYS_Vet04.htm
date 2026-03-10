@@ -28,14 +28,32 @@
     </nav>
          <section>
         <h1> NYS Veteran Hardships by Zip Code</h1>
-		<h2>Overall Poverty Increased, Veteran Poverty Improved, and the Remaining Need Is Still Substantial</h2>
-        <p>
-        New York State's poverty count increased overall, but the ACS 5-year estimates suggest veterans were the one group that showed improvement.
-        From 2019 to 2024, the total number of people below poverty increased by <strong>4.56%</strong> (<strong>+86,210</strong>), and most of it was among
-        nonveterans which increased by <strong>4.74%</strong> (<strong>+87,160</strong>). In contrast, the number of veterans below poverty decreased by
-        <strong>1.92%</strong> (<strong>- 950</strong>). This is encouraging news—however, <strong>48,583</strong> veterans living below poverty is still a
-        substantial number and highlights the continued need for targeted support.
-        </p>
+		<h2>Overall Disability Increased, Veteran Disability Improved, and the Remaining Need Is Still Substantial</h2>
+            <p>
+            New York State’s disability count increased overall, but the ACS 5-year estimates suggest veterans were the one group that showed improvement.
+            From 2019 to 2024, the total number of people with a disability increased by <strong>10.55%</strong> (<strong>+216,595</strong>), and most of the
+            growth was among nonveterans, who increased by <strong>13.22%</strong> (<strong>+245,352</strong>). In contrast, the number of veterans with a
+            disability decreased by <strong>14.63%</strong> (<strong>−28,757</strong>). This is encouraging news—however, <strong>167,819</strong> veterans living
+            with a disability is still a substantial number and highlights the continued need for targeted support.
+            </p>
+
+            <!-- Numbers used (disability chart):
+            2019: Total=2,053,031 | Nonvets=1,856,455 | Vets=196,576
+            2024: Total=2,269,626 | Nonvets=2,101,807 | Vets=167,819
+
+            Differences (2024 - 2019):
+            Total: +216,595
+            Nonvets: +245,352
+            Vets: -28,757
+
+            Percent change formula used:
+            % change = (2024 - 2019) / 2019 * 100
+
+            Calculated:
+            Total: (2,269,626 - 2,053,031) / 2,053,031 * 100 = 10.55%
+            Nonvets: (2,101,807 - 1,856,455) / 1,856,455 * 100 = 13.22%
+            Vets: (167,819 - 196,576) / 196,576 * 100 = -14.63%
+            -->
 
        
 
@@ -51,11 +69,21 @@
 
 
             <p>
-        This ZIP code poverty pattern looks less like a veteran-specific shift and more like a community-wide economic tide. When ZIP codes are grouped by whether
-        <em>total</em> poverty (veteran + nonveteran) increased or decreased from 2019 to 2024, veterans and nonveterans move in the same direction within
-        each group. In the <strong>916</strong> ZIP codes where poverty increased, both groups increased; in the <strong>746</strong> ZIP codes where poverty
-        decreased, both groups decreased. This pattern supports learning from what is working in improving communities and prioritizing targeted local economic and community wide supports in ZIP codes where poverty is increasing, because these shifts affect veterans and nonveterans simultaneously.
-        </p>
+            This ZIP code disability pattern looks less like a community-wide tide and more like a veteran-specific shift. When ZIP codes are grouped by whether
+            <em>total</em> disability (veteran + nonveteran) increased or decreased from 2019 to 2024, the overall community trend and the veteran trend do not move
+            together. In the <strong>971</strong> ZIP codes where total disability increased, nonveteran disability increased while veteran disability still declined;
+            and in the <strong>716</strong> ZIP codes where total disability decreased, veteran disability also declined. Taken together, veteran disability decreased
+            in both “improving” and “worsening” community groups, suggesting that veteran disability change is not directly explained by broader ZIP level disability
+            movement and may reflect veteran specific factors that warrant deeper analysis.
+            </p>
+
+            <!-- ZIP group counts used:
+            Decrease group: 716 ZIP codes
+            Increase group: 971 ZIP codes
+
+            Direction noted from your totals:
+            Both groups: veteran disability change is negative (declines) in both decrease and increase groups
+            -->
         <div class="chart-wrap">
         <img class="chart-img"
        src="Processed_Data/Disability_Movement_NYS_ZIP_Landscape.png"
@@ -68,7 +96,7 @@
 
             <p>
         The chart below is a ZIP code listing for New York State, showing detailed <strong>disability counts</strong> for <strong>veterans</strong> and
-        <strong>nonveterans</strong> in <strong>2019</strong> and <strong>2024</strong>. It’s intentionally granular so you can see what’s happening
+        <strong>nonveterans</strong> in <strong>2019</strong> and <strong>2024</strong>. It's intentionally granular so you can see what's happening
         in individual communities—not just statewide averages. Take a moment to scroll through and look up your ZIP code to see how your community compares
         with statewide patterns.
         </p>
@@ -89,5 +117,12 @@
             </p> 
             
     </section>
+            <footer class="site-footer">
+            <p>
+                This website was independently created by Matthew Flynn as an academic and portfolio project using publicly available U.S. Census Bureau ACS 5 year estimates.
+                All calculations and interpretations are the author’s own and are provided for educational purposes. This project does not use any non public, internal, or
+                secure data sources, and it does not represent the views, policies, or positions of any employer, agency, or organization.
+            </p>
+</footer>
 </body> 
 </html>

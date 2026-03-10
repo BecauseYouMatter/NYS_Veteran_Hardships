@@ -31,15 +31,34 @@
 </nav>
 
 <section>
-    	<h2>Veteran Unemployment Rates in New York State</h2>
-        <p>The following graph shows the unemployment rates for veterans in New York State over the past decade. The data indicates a fluctuating trend, with certain years showing significant increases in unemployment rates. This information is crucial for understanding the economic challenges faced by veterans and can help inform policy decisions aimed at improving their employment prospects.</p>
-         
+    	
     <h2>About This Project</h2>
 
-    <p>
-        This project was created as part of my Google Data Analyst coursework and portfolio development. It focuses on
-        visualizing veteran-related economic hardship indicators across New York State using public data.
-    </p>
+            <p>
+            This project was created as part of my Google Data Analyst coursework and portfolio development. It uses publicly available U.S. Census Bureau ACS 5 year
+            estimates to visualize veteran related hardship indicators across New York State at the ZIP code level, with a focus on changes between 2019 and 2024.
+            The goal is to support clearer, place based conversations about where veterans may need additional support and where community conditions affect veterans and
+            nonveterans alike.
+            </p>
+
+            <p>
+            I focused on this topic because I have spent much of my career working directly with veterans on employment and transition barriers, including delivering
+            transition assistance instruction and workforce reintegration training. Recently, I moved into an employer outreach role focused on building bridges between
+            employers and qualified veterans. My background also includes public service, higher education instruction and support, and prior work in a range of skilled
+            trades and technical roles. This combination of veteran services and hands on technical experience is what led me to build a data driven, community level
+            view of where hardships appear to be concentrated.
+            </p>
+
+            <p>
+            Disclosure of perspective and potential bias: I am a United States Marine Corps disabled combat veteran. This lived experience shapes my interest in the
+            topic and may influence how I interpret patterns and prioritize questions. For transparency, the analysis is grounded in publicly available ACS 5 year
+            estimates, and the intent is to present trends for discussion rather than to claim cause and effect.
+            </p>
+
+            <p>
+            Learn more about my work and background on LinkedIn:
+            <a href="https://www.linkedin.com/in/mrmatthewflynn" target="_blank" rel="noopener">www.linkedin.com/in/mrmatthewflynn</a>
+            </p>
 
     <p>
         Tools and support used in this project include:
@@ -57,52 +76,84 @@
         Notes: ACS 5-year estimates are survey-based and can be sensitive to small denominators in small geographies.
         Downloads are provided for transparency and reuse.
     </p>
-</section>
-
-<section>
+<hr class="section-divider">
     <h2>Downloads</h2>
     <p>
         Use the links below to download the cleaned datasets, supporting files, and (optional) documentation used to
         build this website and Tableau visualizations.
     </p>
 
-    <h3>Cleaned / Analysis-Ready Data (Recommended)</h3>
-    <ul>
-        <!-- Replace filenames with your real ones if different -->
-        <li><a href="Processed_Data/NYS_VetHardships_Clean_2024_2019.csv" download>Clean combined dataset (CSV)</a></li>
-        <li><a href="Processed_Data/NYS_VetHardships_Clean_2024_2019.xlsx" download>Clean combined dataset (Excel)</a></li>
-        <li><a href="Processed_Data/Data_Dictionary_NYS_VetHardships.pdf" download>Data dictionary (PDF)</a></li>
-    </ul>
+  
 
-    <h3>Raw Source Tables (ACS 5-Year)</h3>
-    <ul>
-        <li><a href="Processed_Data/ACS_2014_Source.zip" download>ACS 2014 source tables (ZIP)</a></li>
-        <li><a href="Processed_Data/ACS_2019_Source.zip" download>ACS 2019 source tables (ZIP)</a></li>
-        <li><a href="Processed_Data/ACS_2024_Source.zip" download>ACS 2024 source tables (ZIP)</a></li>
-    </ul>
+        <h2>Labor Force</h2>
+                    <ul>
+                    <li><a href="Processed_Data/labor_force_bars_2019_2024.pdf" download>labor_force_bars_2019_2024.pdf</a></li>
+                    <li><a href="Processed_Data/labor_force_bars_2019_2024.png" download>labor_force_bars_2019_2024.png</a></li>
 
-    <h3>R Scripts / Processing</h3>
-    <ul>
-        <li><a href="Processed_Data/R_Code_Process_ACS.R" download>R script: process and combine ACS files (.R)</a></li>
-        <li><a href="Processed_Data/R_Readme_Processing_Notes.txt" download>Processing notes (TXT)</a></li>
-    </ul>
+                    <li><a href="Processed_Data/Labor_Force_Movement_NYS_ZIP_Landscape.pdf" download>Labor_Force_Movement_NYS_ZIP_Landscape.pdf</a></li>
+                    <li><a href="Processed_Data/Labor_Force_Movement_NYS_ZIP_Landscape.png" download>Labor_Force_Movement_NYS_ZIP_Landscape.png</a></li>
 
-    <h3>Tableau</h3>
-    <ul>
-        <li><a href="Processed_Data/NYS_VetHardships_Tableau.twbx" download>Tableau packaged workbook (.twbx)</a></li>
-        <li><a href="Processed_Data/Tableau_Field_Map.csv" download>Tableau field map / calc notes (CSV)</a></li>
-    </ul>
+                    <li><a href="Processed_Data/labor_force_zip_bars_2019_2024.pdf" download>labor_force_zip_bars_2019_2024.pdf</a></li>
+                    </ul>
 
-    <h3>Website Files</h3>
-    <ul>
-        <li><a href="Processed_Data/Website_Source.zip" download>Website source (HTML/CSS/JS/Images) (ZIP)</a></li>
-    </ul>
+                    <h2>Poverty</h2>
+                    <ul>
+                    <li><a href="Processed_Data/poverty_bars_2019_2024.pdf" download>poverty_bars_2019_2024.pdf</a></li>
+                    <li><a href="Processed_Data/poverty_bars_2019_2024.png" download>poverty_bars_2019_2024.png</a></li>
 
-    <h3>Links (Optional)</h3>
-    <ul>
-        <li><a href="#" target="_blank" rel="noopener">Tableau Public profile / project link</a></li>
-        <li><a href="#" target="_blank" rel="noopener">GitHub repository (site source + data)</a></li>
-    </ul>
+                    <li><a href="Processed_Data/Poverty_Movement_NYS_ZIP_Landscape.pdf" download>Poverty_Movement_NYS_ZIP_Landscape.pdf</a></li>
+                    <li><a href="Processed_Data/Poverty_Movement_NYS_ZIP_Landscape.png" download>Poverty_Movement_NYS_ZIP_Landscape.png</a></li>
+
+                    <li><a href="Processed_Data/poverty_zip_bars_2019_2024.pdf" download>poverty_zip_bars_2019_2024.pdf</a></li>
+                    </ul>
+
+                    <h2>Disability</h2>
+                    <ul>
+                    <li><a href="Processed_Data/disability_bars_2019_2024.pdf" download>disability_bars_2019_2024.pdf</a></li>
+                    <li><a href="Processed_Data/disability_bars_2019_2024.png" download>disability_bars_2019_2024.png</a></li>
+
+                    <li><a href="Processed_Data/Disability_Movement_NYS_ZIP_Landscape.pdf" download>Disability_Movement_NYS_ZIP_Landscape.pdf</a></li>
+                    <li><a href="Processed_Data/Disability_Movement_NYS_ZIP_Landscape.png" download>Disability_Movement_NYS_ZIP_Landscape.png</a></li>
+
+                    <li><a href="Processed_Data/disability_zip_bars_2019_2024.pdf" download>disability_zip_bars_2019_2024.pdf</a></li>
+                    </ul>
+
+                    <h2>Processed and Cleaned Data (RStudio Output)</h2>
+                    <p>
+                    These CSV files were extracted and processed in RStudio. The “dropped” version removes ZIP codes that did not contain valid population counts and appeared
+                    to represent PO Box only ZIP codes.
+                    </p>
+                    <ul>
+                    <li><a href="Processed_Data/S2101_Veteran_Loop.csv" download>S2101_Veteran_Loop.csv</a></li>
+                    <li><a href="Processed_Data/S2101_Veteran_Loop_dropped.csv" download>S2101_Veteran_Loop_dropped.csv</a></li>
+                    </ul>
+
+                    <h2>Raw Census Download (ACS 5-Year)</h2>
+                    <p>
+                    This ZIP file contains the raw S2101 tables downloaded from the U.S. Census Bureau and used as the source for the processed datasets above.
+                    </p>
+                    <ul>
+                    <li><a href="RawData/NYS_S2101_2026-02-12T214820.zip" download>NYS_S2101_2026-02-12T214820.zip</a></li>
+                    </ul>
+
+                    <h2>Tableau Charts (Interactive Dashboard)</h2>
+                        <p>
+                        The interactive Tableau charts used on this website are available at the link below.
+                        </p>
+                        <ul>
+                        <li><a href="https://public.tableau.com/views/NYSVeteranHardshipsbyZipCode/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">NYS Veteran Hardships by Zip Code (Tableau Public)</a></li>
+                        </ul>
+
+ 
+
 </section>
 
+            <footer class="site-footer">
+            <p>
+                This website was independently created by Matthew Flynn as an academic and portfolio project using publicly available U.S. Census Bureau ACS 5 year estimates.
+                All calculations and interpretations are the author’s own and are provided for educational purposes. This project does not use any non public, internal, or
+                secure data sources, and it does not represent the views, policies, or positions of any employer, agency, or organization.
+            </p>
+</footer>
+</body> 
 </html>
