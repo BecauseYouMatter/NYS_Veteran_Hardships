@@ -81,6 +81,13 @@ nav .nav-disabled{
   height: auto;
   max-width: 100%;
 }
+
+.section-divider{
+  width: 66%;
+  margin: 1.5rem auto;   /* centers it */
+  border: 0;
+  border-top: 2px solid  #0B5D66;
+}
  /* +++++++++++++++small screen++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media all and (min-width:900px){
 
