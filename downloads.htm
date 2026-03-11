@@ -34,32 +34,34 @@
     	
     <h2>About This Project</h2>
 
-            <p>
-            This project was created as part of my Google Data Analyst coursework and portfolio development. It uses publicly available U.S. Census Bureau ACS 5 year
-            estimates to visualize veteran related hardship indicators across New York State at the ZIP code level, with a focus on changes between 2019 and 2024.
-            The goal is to support clearer, place based conversations about where veterans may need additional support and where community conditions affect veterans and
-            nonveterans alike.
-            </p>
+    <p>
+        This project was created as part of my Google Data Analyst coursework and portfolio development. It uses publicly available U.S. Census Bureau ACS 5 year
+        estimates to visualize veteran related hardship indicators across New York State at the ZIP code level, with a focus on changes between 2019 and 2024.
+        The goal is to support clearer, place based conversations about where veterans may need additional support and where community conditions affect veterans and
+        nonveterans alike.
+    </p>
 
-            <p>
-            I focused on this topic because I have spent much of my career working directly with veterans on employment and transition barriers, including delivering
-            transition assistance instruction and workforce reintegration training. Recently, I moved into an employer outreach role focused on building bridges between
-            employers and qualified veterans. My background also includes public service, higher education instruction and support, and prior work in a range of skilled
-            trades and technical roles. This combination of veteran services and hands on technical experience is what led me to build a data driven, community level
-            view of where hardships appear to be concentrated.
-            </p>
+    <p>
+        I focused on this topic because I have spent much of my career working directly with veterans on employment and transition barriers, including delivering
+        transition assistance instruction and workforce reintegration training. Recently, I moved into an employer outreach role focused on building bridges between
+        employers and qualified veterans. My background also includes public service, higher education instruction and support, and prior work in a range of skilled
+        trades and technical roles. This combination of veteran services and hands on technical experience is what led me to build a data driven, community level
+        view of where hardships appear to be concentrated.
+    </p>
 
-            <p>
-            Disclosure of perspective and potential bias: I am a United States Marine Corps disabled combat veteran. This lived experience shapes my interest in the
-            topic and may influence how I interpret patterns and prioritize questions. For transparency, the analysis is grounded in publicly available ACS 5 year
-            estimates, and the intent is to present trends for discussion rather than to claim cause and effect.
-            </p>
+    <p>
+        <strong>Perspective and Transparency:</strong> I am a United States Marine Corps disabled combat veteran. While this project is grounded in publicly available 
+        ACS 5 year estimates, my lived experience and career in veteran services shape my interest in this topic and influence the questions I choose to prioritize. 
+        This is not a peer reviewed academic study or a triple blind review; rather, it is an analysis intended to present trends for discussion and to highlight 
+        actionable insights that regional averages may overlook.
+    </p>
 
-            <p>
-            Learn more about my work and background on LinkedIn:
-            <a href="https://www.linkedin.com/in/mrmatthewflynn" target="_blank" rel="noopener">www.linkedin.com/in/mrmatthewflynn</a>
-            </p>
+    <p>
+        Learn more about my work and background on LinkedIn:
+        <a href="https://www.linkedin.com/in/mrmatthewflynn" target="_blank" rel="noopener">www.linkedin.com/in/mrmatthewflynn</a>
+    </p>
 
+    
     <p>
         Tools and support used in this project include:
     </p>
@@ -69,6 +71,7 @@
         <li><strong>RStudio</strong> — data cleaning, reshaping, and export to analysis-ready files</li>
         <li><strong>Tableau Public</strong> — interactive charts and dashboards embedded throughout this site</li>
         <li><strong>ChatGPT</strong> — assistance with code troubleshooting, formatting, and page structure</li>
+        <li><strong>Gemini AI</strong> — Assistance with narrative editing, structural logic, and ensuring data alignment with institutional veteran support standards</li>
         <li><strong>AITubo AI</strong> — image generation used for page illustrations</li>
     </ul>
 
@@ -118,6 +121,18 @@
                     <li><a href="Processed_Data/disability_zip_bars_2019_2024.pdf" download>disability_zip_bars_2019_2024.pdf</a></li>
                     </ul>
 
+                    <h2>RStudio Analysis Scripts</h2>
+                    <p>
+                        The following R scripts were used to perform data cleaning, reshaping, and visualization for this project.
+                    </p>
+                    <ul>
+                        <li><a href="Code/Disablity_Movement_by_NYS_ZIP_Code.R" download>Disablity_Movement_by_NYS_ZIP_Code.R</a></li>
+                        <li><a href="Code/Labor_Force_Movement_by_NYS_ZIP_Code.R" download>Labor_Force_Movement_by_NYS_ZIP_Code.R</a></li>
+                        <li><a href="Code/Poverty_Movement_by_NYS_ZIP_Code.R" download>Poverty_Movement_by_NYS_ZIP_Code.R</a></li>
+                        <li><a href="Code/S2101_Veteran_Status_2024_2019_2014.R" download>S2101_Veteran_Status_2024_2019_2014.R</a></li>
+                        <li><a href="Code/S2101_Veteran_Status_2024_2019_2014_charts.R" download>S2101_Veteran_Status_2024_2019_2014_charts.R</a></li>
+                    </ul>
+                    
                     <h2>Processed and Cleaned Data (RStudio Output)</h2>
                     <p>
                     These CSV files were extracted and processed in RStudio. The “dropped” version removes ZIP codes that did not contain valid population counts and appeared
@@ -127,6 +142,7 @@
                     <li><a href="Processed_Data/S2101_Veteran_Loop.csv" download>S2101_Veteran_Loop.csv</a></li>
                     <li><a href="Processed_Data/S2101_Veteran_Loop_dropped.csv" download>S2101_Veteran_Loop_dropped.csv</a></li>
                     </ul>
+
 
                     <h2>Raw Census Download (ACS 5-Year)</h2>
                     <p>
